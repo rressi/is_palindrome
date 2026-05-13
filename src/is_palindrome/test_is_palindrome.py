@@ -1,7 +1,7 @@
 import pytest
 
-from is_palindrome_simpler import solution as solution_simpler
-from is_palindrome_bfs import solution as solution_bfs
+from is_palindrome.simpler import solution as solution_simpler
+from is_palindrome.bfs import solution as solution_bfs
 
 
 @pytest.fixture(params=[solution_simpler, solution_bfs], ids=["simpler", "bfs"])

@@ -7,7 +7,7 @@ name = "is-palindrome"
 version = "0.1.0"
 description = "Check if a string can be a palindrome by deleting at most one character"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 authors = [
     {name = "Riccardo", email = "riccardo@example.com"},
 ]
@@ -15,9 +15,12 @@ authors = [
 [project.optional-dependencies]
 dev = ["pytest"]
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/is_palindrome"]
+
 [tool.uv]
 dev-dependencies = ["pytest"]
 
 [tool.pytest.ini_options]
-testpaths = ["."]
+testpaths = ["src/is_palindrome"]
 python_files = ["test_*.py"]
