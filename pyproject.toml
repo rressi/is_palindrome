@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "is-palindrome"
+version = "0.1.0"
+description = "Check if a string can be a palindrome by deleting at most one character"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "Riccardo", email = "riccardo@example.com"},
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.uv]
+dev-dependencies = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]
