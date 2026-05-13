@@ -1,10 +1,25 @@
 import pytest
 
-from is_palindrome.simpler import solution as solution_simpler
 from is_palindrome.bfs import solution as solution_bfs
+from is_palindrome.even_simpler import solution as solution_even_simpler
+from is_palindrome.recursive import solution as solution_recursive
+from is_palindrome.simpler import solution as solution_simpler
 
 
-@pytest.fixture(params=[solution_simpler, solution_bfs], ids=["simpler", "bfs"])
+@pytest.fixture(
+        params=[
+            solution_bfs,
+            solution_even_simpler,
+            solution_recursive,
+            solution_simpler,
+        ],
+        ids=[
+            "bfs",
+            "even_simpler",
+            "recursive",
+            "simpler",
+        ],
+)
 def solution(request):
     """Fixture that provides both solution implementations."""
     return request.param
